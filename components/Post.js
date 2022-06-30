@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { getDate } from '../utils/utils';
 
 export default function Post({ post, featuredMedia }) {
+  console.log(featuredMedia);
   return (
     <div className="card mb-3" style={{ maxWidth: '540px' }}>
       <div className="row g-0">
@@ -13,10 +14,10 @@ export default function Post({ post, featuredMedia }) {
           <Link href={`/posts/${post.slug}`}>
             <a>
               <Image
-                src={featuredMedia['media_details'].sizes.medium['source_url']}
+                src="https://ziel.com.co/wp-content/uploads/2022/06/buril.jpg"/*{featuredMedia['media_details'].sizes.medium['source_url']}*/
                 width={180}
                 height={120}
-                alt={featuredMedia['alt_text']}
+                alt="img"/*{featuredMedia['alt_text']}*/
               />
             </a>
           </Link>

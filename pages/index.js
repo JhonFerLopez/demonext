@@ -7,12 +7,15 @@ import Event from '../components/Event';
 
 export default function Home({ posts, events }) {
   const jsxPosts = posts.map((post) => {
-    const featuredMedia = post['_embedded']['wp:featuredmedia'][0];
+    //const featuredMedia = post['_embedded']['wp:featuredmedia'][0];
+    //console.log(post);
+    const featuredMedia = "hola mundo";
     return <Post post={post} featuredMedia={featuredMedia} key={post.id} />;
   });
 
   const jsxEvents = events.map((event) => {
-    const featuredMedia = event['_embedded']['wp:featuredmedia'][0];
+    //const featuredMedia = event['_embedded']['wp:featuredmedia'][0];
+    const featuredMedia = "hola Eventos";
     return <Event event={event} featuredMedia={featuredMedia} key={event.id} />;
   });
 
@@ -27,7 +30,9 @@ export default function Home({ posts, events }) {
         <link rel="icon" href="/favicon.ico" />
         {/* You can add more metadata here, like open graph tags for social media, etc */}
       </Head>
-
+      <video autoPlay loop style={{ width: '500px', height: '500px' }}>
+        <source src="https://www.youtube.com/watch?v=nC0Cgjd5O4A" />
+      </video>
       <div className="container pt-5">
         <h1 className="text-center pb-5">Tech Blog</h1>
         <div className="row">
@@ -48,7 +53,7 @@ export default function Home({ posts, events }) {
 export async function getStaticProps({ params }) {
   const posts = await getPosts();
   const events = await getEvents();
-  const media = await getMedia();
+  //const media = await getMedia();
 
   return {
     props: {

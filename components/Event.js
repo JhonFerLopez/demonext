@@ -9,10 +9,10 @@ export default function Event({ event, featuredMedia }) {
       <Link href={`/events/${event.slug}`}>
         <a>
           <Image
-            src={featuredMedia['media_details'].sizes.medium['source_url']}
+            src="https://ziel.com.co/wp-content/uploads/2022/06/buril.jpg"/*{featuredMedia['media_details'].sizes.medium['source_url']}*/
             width={288}
             height={190}
-            alt={featuredMedia['alt_text']}
+            alt="eventosIMG"/*{featuredMedia['alt_text']}*/
             className="card-img-top"
           />
         </a>
@@ -21,7 +21,7 @@ export default function Event({ event, featuredMedia }) {
         <h5 className="card-title">{event.title.rendered}</h5>
         <div
           className="card-text"
-          dangerouslySetInnerHTML={{ __html: event.excerpt.rendered }}
+          dangerouslySetInnerHTML={{ __html: event.content.rendered }}
         ></div>
         <p className="card-text">
           <small className="text-muted">{event.acf.date}</small>
