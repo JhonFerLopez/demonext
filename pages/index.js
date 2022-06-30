@@ -30,11 +30,9 @@ export default function Home({ posts, events }) {
         <link rel="icon" href="/favicon.ico" />
         {/* You can add more metadata here, like open graph tags for social media, etc */}
       </Head>
-      <video autoPlay loop style={{ width: '500px', height: '500px' }}>
-        <source src="https://www.youtube.com/watch?v=nC0Cgjd5O4A" />
-      </video>
       <div className="container pt-5">
         <h1 className="text-center pb-5">Tech Blog</h1>
+        
         <div className="row">
           <div className="col-lg-8">
             <h2 className="pb-3">Our blog posts</h2>
